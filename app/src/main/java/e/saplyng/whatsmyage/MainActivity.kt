@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
                 //var dateOfBirth: LocalDate = LocalDate.of(birthDate[0].toInt(),birthDate[1].toInt(),birthDate[2].toInt())
                 //ar dateOfVaccine: LocalDate = LocalDate.of(vaccineDate[0].toInt(),vaccineDate[1].toInt(),vaccineDate[2].toInt())
                 println("working")
-                val calculatedTime = Duration.between(today, parseBirth)
-                //calculatedTime = dateOfVaccine.minusMonths(dateOfBirth)
+                //val calculatedTime = Duration.between(parseBirth, today)
+                val calculatedTime =  parseBirth.until(today)
                 println("calculatedTime")
                 idInformation.text = "$calculatedTime"
 
