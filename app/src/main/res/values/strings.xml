@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">What\'s my Age?</string>
+    <string name="textBox1">Date of Birth</string>
+    <string name="textBox2">Date of Vaccine</string>
+    <string name="calculateButton">Calculate</string>
+    <string name="information"></string>
+</resources>
