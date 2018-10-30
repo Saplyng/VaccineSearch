@@ -13,10 +13,10 @@
             android:layout_height="17dp"
             android:id="@+id/textView2" android:layout_marginTop="44dp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="96dp" android:gravity="center_horizontal"/>
+            android:layout_marginStart="96dp" android:gravity="center_vertical|center_horizontal"/>
     <EditText
             android:layout_width="190dp"
-            android:layout_height="53dp"
+            android:layout_height="55dp"
             android:inputType="date"
             android:ems="10"
             android:id="@+id/idDateOfBirth"
@@ -24,15 +24,15 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.486" android:selectAllOnFocus="true"
-    />
+            android:hint="@string/dateHint" android:gravity="center_vertical|center_horizontal"/>
     <TextView
             android:text="@string/textBox2"
             android:layout_width="132dp"
             android:layout_height="17dp"
             android:id="@+id/textView3" android:layout_marginTop="40dp"
             app:layout_constraintTop_toBottomOf="@+id/idDateOfBirth" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:gravity="center_horizontal"/>
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:gravity="center_vertical|center_horizontal"/>
     <EditText
             android:layout_width="187dp"
             android:layout_height="44dp"
@@ -40,9 +40,10 @@
             android:ems="10"
             android:id="@+id/idVaccineDate"
             app:layout_constraintTop_toBottomOf="@+id/textView3" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
-            app:layout_constraintHorizontal_bias="0.503"/>
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503" android:hint="@string/dateHint"
+            android:gravity="center_vertical|center_horizontal"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,4 +59,13 @@
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginTop="24dp"
             app:layout_constraintTop_toBottomOf="@+id/idButton"/>
+    <TextView
+            android:hint="select Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDate"
+            app:layout_constraintTop_toTopOf="@+id/idInformation"
+            app:layout_constraintBottom_toBottomOf="@+id/idInformation"
+            app:layout_constraintEnd_toEndOf="@+id/idInformation"
+            app:layout_constraintStart_toStartOf="@+id/idInformation"/>
 </android.support.constraint.ConstraintLayout>

@@ -1,16 +1,19 @@
 package e.saplyng.whatsmyage
 
+import android.app.DatePickerDialog
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Exception
+import java.text.SimpleDateFormat
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-import java.time.Duration
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,22 +23,23 @@ class MainActivity : AppCompatActivity() {
             try {
                 //val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
                 val today = LocalDate.now()
-                //val formattedToday = today.format(formatter)
-                //val birthDate = idDateOfBirth.text.split("-", "/", ".")
-                //val vaccineDate = idVaccineDate.text.split("-", "/", ".")
                 val parseBirth = LocalDate.parse(idDateOfBirth.text)
+                val parseVaccine = LocalDate.parse(idVaccineDate.text)
+                
 
-
-                //var dateOfBirth: LocalDate = LocalDate.of(birthDate[0].toInt(),birthDate[1].toInt(),birthDate[2].toInt())
-                //ar dateOfVaccine: LocalDate = LocalDate.of(vaccineDate[0].toInt(),vaccineDate[1].toInt(),vaccineDate[2].toInt())
                 println("working")
                 //val calculatedTime = Duration.between(parseBirth, today)
                 val calculatedTime =  parseBirth.until(today)
+                val calcuatedVaccineTime = parseBirth.until(parseVaccine)
+                val timeSinceVaccine = parseVaccine.until(today)
                 println("calculatedTime")
-                idInformation.text = "$calculatedTime"
+                idInformation.text = "The patient is currently ${calculatedTime.years} years ${calculatedTime.months} months old" +
+                        "The patient got their vaccine when they were ${calcuatedVaccineTime.years} years ${calcuatedVaccineTime.months}" +
+                        "It has been ${timeSinceVaccine.years} years ${timeSinceVaccine.months} months since the vaccine date"
+
 
             } catch (e: Exception) {
-                Toast.makeText(this, "An Error Occured", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "An Error Occurred", Toast.LENGTH_SHORT).show()
             }
         }
 
