@@ -9,11 +9,14 @@
 
     <TextView
             android:text="@string/textBox1"
-            android:layout_width="185dp"
-            android:layout_height="17dp"
-            android:id="@+id/textView2" android:layout_marginTop="44dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="96dp" android:gravity="center_vertical|center_horizontal"/>
+            android:layout_width="193dp"
+            android:layout_height="23dp"
+            android:id="@+id/textView2" android:layout_marginTop="144dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.508" android:textSize="18sp" android:layout_marginLeft="8dp"/>
     <EditText
             android:layout_width="190dp"
             android:layout_height="55dp"
@@ -21,18 +24,20 @@
             android:ems="10"
             android:id="@+id/idDateOfBirth"
             app:layout_constraintTop_toBottomOf="@+id/textView2" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="5dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.486" android:selectAllOnFocus="true"
-            android:hint="@string/dateHint" android:gravity="center_vertical|center_horizontal"/>
+            app:layout_constraintHorizontal_bias="0.5" android:selectAllOnFocus="true"
+            android:hint="@string/dateHint" android:gravity="center_vertical|center_horizontal"
+            android:layout_marginRight="8dp"/>
     <TextView
             android:text="@string/textBox2"
-            android:layout_width="132dp"
-            android:layout_height="17dp"
-            android:id="@+id/textView3" android:layout_marginTop="40dp"
+            android:layout_width="183dp"
+            android:layout_height="28dp"
+            android:id="@+id/textView3" android:layout_marginTop="12dp"
             app:layout_constraintTop_toBottomOf="@+id/idDateOfBirth" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:gravity="center_vertical|center_horizontal"/>
+            android:layout_marginEnd="8dp" android:gravity="center_vertical|center_horizontal"
+            app:layout_constraintHorizontal_bias="0.5" android:textSize="18sp"/>
     <EditText
             android:layout_width="187dp"
             android:layout_height="44dp"
@@ -42,30 +47,48 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503" android:hint="@string/dateHint"
-            android:gravity="center_vertical|center_horizontal"/>
+            app:layout_constraintHorizontal_bias="0.5" android:hint="@string/dateHint"
+            android:gravity="center_vertical|center_horizontal" android:selectAllOnFocus="true"
+    />
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/idButton" android:layout_marginTop="20dp"
+            android:id="@+id/idButton" android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@+id/idVaccineDate" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:text="@string/calculateButton"/>
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:text="@string/calculateButton"
+            app:layout_constraintHorizontal_bias="0.5"/>
     <TextView
-            android:layout_width="293dp"
-            android:layout_height="140dp"
+            android:layout_width="320dp"
+            android:layout_height="32dp"
             android:id="@+id/idInformation" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/idButton"/>
+            app:layout_constraintTop_toBottomOf="@+id/idButton" app:layout_constraintHorizontal_bias="0.5"/>
     <TextView
-            android:hint="select Date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvDate"
-            app:layout_constraintTop_toTopOf="@+id/idInformation"
-            app:layout_constraintBottom_toBottomOf="@+id/idInformation"
-            app:layout_constraintEnd_toEndOf="@+id/idInformation"
-            app:layout_constraintStart_toStartOf="@+id/idInformation"/>
+            android:layout_width="320dp"
+            android:layout_height="31dp"
+            android:id="@+id/idInformation2"
+            app:layout_constraintTop_toBottomOf="@+id/idInformation" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.5"/>
+    <TextView
+            android:layout_width="320dp"
+            android:layout_height="28dp"
+            android:id="@+id/idInformation3" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/idInformation2" app:layout_constraintHorizontal_bias="0.5"
+    />
+    <android.support.constraint.Barrier android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                        android:id="@+id/barrier" app:barrierDirection="top"/>
+    <android.support.constraint.Group android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                      android:id="@+id/group"/>
+    <ImageView
+            android:layout_width="363dp"
+            android:layout_height="123dp" app:srcCompat="@drawable/ic_miracle_medecine"
+            android:id="@+id/imageView" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+    />
 </android.support.constraint.ConstraintLayout>
