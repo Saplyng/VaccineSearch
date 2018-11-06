@@ -1,5 +1,7 @@
 package e.saplyng.whatsmyage
 
+import android.app.DatePickerDialog
+
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -7,15 +9,47 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Exception
 import com.jakewharton.threetenabp.AndroidThreeTen
 import org.threeten.bp.LocalDate
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
+    var dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.US)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AndroidThreeTen.init(this)
         setContentView(R.layout.activity_main)
+
+        idDateOfBirth.setOnClickListener {
+            val now = Calendar.getInstance()
+            val datePicker = DatePickerDialog(this,DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+                val selectedDate = Calendar.getInstance()
+                selectedDate.set(Calendar.YEAR, year)
+                selectedDate.set(Calendar.MONTH, month)
+                selectedDate.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+                val date = dateFormat.format(selectedDate.time)
+                idDateOfBirth.text = date
+                Toast.makeText(this, "$date", Toast.LENGTH_SHORT).show()
+            }, now.get(Calendar.YEAR), now.get(Calendar.MONTH), now.get(Calendar.DAY_OF_MONTH))
+            datePicker.show()
+        }
+
+        idVaccineDate.setOnClickListener {
+            val now = Calendar.getInstance()
+            val datePicker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+                val selectedDate = Calendar.getInstance()
+                selectedDate.set(Calendar.YEAR, year)
+                selectedDate.set(Calendar.MONTH, month)
+                selectedDate.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+                val date = dateFormat.format(selectedDate.time)
+                idVaccineDate.text = date
+                Toast.makeText(this, "$date", Toast.LENGTH_SHORT).show()
+            }, now.get(Calendar.YEAR), now.get(Calendar.MONTH), now.get(Calendar.DAY_OF_MONTH))
+            datePicker.show()
+        }
+
 
         idButton.setOnClickListener {
             try {
@@ -40,6 +74,8 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "An Error Occurred", Toast.LENGTH_SHORT).show()
             }
         }
+
+
 
 
     }

@@ -17,12 +17,12 @@
             android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.508" android:textSize="18sp" android:layout_marginLeft="8dp"/>
-    <EditText
+    <Button
             android:layout_width="190dp"
             android:layout_height="55dp"
-            android:inputType="date"
             android:ems="10"
             android:id="@+id/idDateOfBirth"
+            android:text=""
             app:layout_constraintTop_toBottomOf="@+id/textView2" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,12 +38,12 @@
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" android:gravity="center_vertical|center_horizontal"
             app:layout_constraintHorizontal_bias="0.5" android:textSize="18sp"/>
-    <EditText
+    <Button
             android:layout_width="187dp"
             android:layout_height="44dp"
-            android:inputType="date"
             android:ems="10"
             android:id="@+id/idVaccineDate"
+            android:text=""
             app:layout_constraintTop_toBottomOf="@+id/textView3" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
