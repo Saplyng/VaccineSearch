@@ -105,27 +105,29 @@ class VaccineSearch : AppCompatActivity(){
 
         //SEARCHBAR TEXT CHANGE LISTENER
         searchBar.addTextChangeListener(object: TextWatcher {
-            override fun beforeTextChanged(charSequence: CharSequence?, start: Int, count: Int, after: Int) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            override fun beforeTextChanged(charSequence: CharSequence, start: Int, count: Int, after: Int) {
+
             }
 
-            override fun onTextChanged(charSequence: CharSequence?, start: Int, before: Int, count: Int) {
+            override fun onTextChanged(charSequence: CharSequence, start: Int, before: Int, count: Int) {
                 //SEARCH FILTER
                 adapter.getFilter().filter(charSequence)
             }
 
             override fun afterTextChanged(s: Editable?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                
             }
         })
 
         //LISTVIEW ITEM CLICKED
         lv.setOnItemClickListener(object : AdapterView.OnItemClickListener {
-            override fun onItemClick(parent: AdapterView<*>?, view: View, i: Int, id: Long) {
+            override fun onItemClick(adapterView: AdapterView<*>, view: View, i: Int, l: Long) {
                 Toast.makeText(this@VaccineSearch,adapter.getItem(i)!!.toString(), Toast.LENGTH_SHORT).show()
             }
         })
 
+
+        //end
 
     }
 }
