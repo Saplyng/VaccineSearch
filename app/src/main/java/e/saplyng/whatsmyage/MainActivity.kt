@@ -1,9 +1,11 @@
 package e.saplyng.whatsmyage
 
 import android.app.DatePickerDialog
+import android.content.Intent
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Exception
@@ -74,6 +76,18 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "An Error Occurred", Toast.LENGTH_SHORT).show()
             }
         }
+
+        // button goes to new activity
+        val btnNext1 = idButtonNext
+        btnNext1.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                val in1 = Intent(this@MainActivity, VaccineSearch::class.java)
+                startActivity(in1)
+            }
+        })
+
+
+
 
 
 
