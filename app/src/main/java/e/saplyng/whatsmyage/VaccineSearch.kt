@@ -115,7 +115,7 @@ class VaccineSearch : AppCompatActivity(){
             }
 
             override fun afterTextChanged(s: Editable?) {
-                
+
             }
         })
 
