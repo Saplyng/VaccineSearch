@@ -90,7 +90,7 @@ val hpv = Vaccine("Human Papillomavirus", listOf("human papillomavirus", "HPV",
     "Gardasil 9"), "")
 
 
-val allAlias = listOf<String>(
+val vaccines = arrayOf(
     "Hepatitis B", "HepB",
     "Recombivax HB", "Engerix-B",
     "Elovac B", "Genevac B",
