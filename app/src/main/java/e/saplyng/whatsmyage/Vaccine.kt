@@ -161,3 +161,8 @@ val vaccines = arrayOf(
     "Gardasil", "Cervarix",
     "Gardasil 9"
 )
+
+fun displayVaccine(vaccineName: Vaccine){
+
+
+}
