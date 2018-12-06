@@ -67,9 +67,9 @@ class MainActivity : AppCompatActivity() {
                 val calcuatedVaccineTime = parseBirth.until(parseVaccine)
                 val timeSinceVaccine = parseVaccine.until(today)
                 println("calculatedTime")
-                idInformation.text = "Patient Current Age: ${calculatedTime.years} years ${calculatedTime.months} months old"
-                idInformation2.text = "Patient Age at Vaccine:  ${calcuatedVaccineTime.years} years ${calcuatedVaccineTime.months} months old"
-                idInformation3.text = "Time Since Vaccination:  ${timeSinceVaccine.years} years ${timeSinceVaccine.months} months"
+                idInformation.text = "${calculatedTime.years} years ${calculatedTime.months} months old"
+                idInformation2.text = "${calcuatedVaccineTime.years} years ${calcuatedVaccineTime.months} months old"
+                idInformation3.text = "${timeSinceVaccine.years} years ${timeSinceVaccine.months} months"
 
 
             } catch (e: Exception) {

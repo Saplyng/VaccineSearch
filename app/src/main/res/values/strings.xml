@@ -7,4 +7,8 @@
     <string name="dateHint">Select a Date</string>
     <string name="title">Title</string>
     <string name="alias">Aliases</string>
+    <string name="nextButton">Search Vaccines</string>
+    <string name="currentAge">Patient\n Current\n Age</string>
+    <string name="vaccineAge">Age\n at\n Vaccination</string>
+    <string name="timeVaccine">Time\n Since\n Vaccination</string>
 </resources>
