@@ -64,11 +64,11 @@ class MainActivity : AppCompatActivity() {
                 println("working")
                 //val calculatedTime = Duration.between(parseBirth, today)
                 val calculatedTime =  parseBirth.until(today)
-                val calcuatedVaccineTime = parseBirth.until(parseVaccine)
+                val calculatedVaccineTime = parseBirth.until(parseVaccine)
                 val timeSinceVaccine = parseVaccine.until(today)
                 println("calculatedTime")
                 idInformation.text = "${calculatedTime.years} years ${calculatedTime.months} months old"
-                idInformation2.text = "${calcuatedVaccineTime.years} years ${calcuatedVaccineTime.months} months old"
+                idInformation2.text = "${calculatedVaccineTime.years} years ${calculatedVaccineTime.months} months old"
                 idInformation3.text = "${timeSinceVaccine.years} years ${timeSinceVaccine.months} months"
 
 

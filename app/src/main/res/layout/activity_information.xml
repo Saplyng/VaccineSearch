@@ -28,7 +28,7 @@
             android:gravity="center_vertical|start"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/idTitle"/>
+            app:layout_constraintTop_toBottomOf="@+id/idTitle" app:layout_constraintHorizontal_bias="0.571"/>
     <ListView
             android:layout_width="354dp"
             android:layout_height="409dp"
